@@ -1,0 +1,36 @@
+/* layout.css */
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(
+    238,
+    235,
+    235
+  ); /* Apply the gray background to the whole screen */
+}
+
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.layout-container > Header {
+  flex-shrink: 0; /* Ensure Header doesn't grow */
+}
+
+.layout-container > Body {
+  flex: 1; /* Ensure Body takes up available space */
+}
+
+.layout-container > .content {
+  flex: 1; /* Ensure .content takes up available space */
+}
+
+.layout-container > Footer {
+  flex-shrink: 0; /* Ensure Footer doesn't grow and stays at the bottom */
+  margin-top: auto; /* Push Footer to the bottom */
+}

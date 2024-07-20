@@ -1,0 +1,51 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px; /* Adjust padding as needed */
+  background-color: #ffffff; /* Optional background color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional box shadow */
+}
+
+.logo img {
+  height: 40px; /* Adjust logo height as needed */
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.search-icon {
+  margin-right: 8px; /* Adjust spacing between icon and input */
+}
+
+input[type="text"] {
+  border: none;
+  outline: none;
+  width: 300px; /* Adjust width as needed */
+  padding: 8px;
+  font-size: 14px;
+}
+
+.user-menu {
+  display: flex;
+  gap: 16px; /* Adjust spacing between menu items */
+}
+
+button {
+  background-color: black;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}

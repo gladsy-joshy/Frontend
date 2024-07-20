@@ -1,0 +1,363 @@
+.category {
+  position: relative;
+  text-align: center;
+  width: 120px;
+}
+
+.category-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+.category-button img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  margin-bottom: 5px;
+}
+
+.category-name-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.category-name {
+  font-size: 14px;
+  color: black;
+  text-transform: capitalize;
+  flex-grow: 1;
+  white-space: nowrap;
+}
+
+.dropdown-icon {
+  transition: transform 0.2s;
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+.dropdown-icon.rotate {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(
+    100% + 5px
+  ); /* Position it just below the button with a small gap */
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 1500; /* Higher z-index to ensure it is above other elements */
+  width: 150px;
+  text-align: left;
+}
+
+.dropdown-item {
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
+.body-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0; /* Remove padding */
+  background-color: rgb(238, 235, 235);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  box-sizing: border-box;
+  min-height: 140vh;
+}
+
+.carousel-section {
+  width: 100%;
+  overflow: hidden;
+  max-width: 1600px;
+  margin: 0; /* Remove margins */
+  padding: 0; /* Remove paddings */
+  position: relative;
+  z-index: 500; /* Lower z-index to ensure dropdown appears above it */
+}
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  max-width: 1600px;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  position: relative;
+}
+
+.carousel-image {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.carousel-button.prev {
+  left: 0;
+}
+
+.carousel-button.next {
+  right: 0;
+}
+
+/* Add this to remove the gap between categories and carousel */
+.categories-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0; /* Ensure no margin at the bottom */
+  padding-bottom: 0; /* Ensure no padding at the bottom */
+}
+
+.best-of-electronics {
+  margin: 20px 0;
+  padding: 0 20px;
+  position: relative;
+  width: calc(100% - 40px);
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f9f9f9;
+}
+
+.best-of-electronics h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.electronics-row {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+
+.electronics-item {
+  min-width: 200px;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 0 10px;
+  padding: 10px;
+  text-align: center;
+  background: white;
+  box-sizing: border-box;
+}
+
+.electronics-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.electronics-item p {
+  margin: 5px 0;
+  color: #333;
+}
+
+.electronics-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.electronics-button.prev {
+  left: 10px;
+}
+
+.electronics-button.next {
+  right: 10px;
+}
+
+.electronics-container {
+  overflow: hidden;
+  flex: 1;
+  width: 80%;
+  position: relative;
+}
+
+.electronics-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.electronics-item {
+  position: relative;
+  margin: 0 10px;
+  padding: 10px;
+}
+
+.item-details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.92); /* Transparent black background */
+  color: white;
+  padding: 10px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  filter: brightness(5.5); /* Increase brightness */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Add a subtle text shadow */
+}
+
+.electronics-item:hover .item-details {
+  opacity: 1;
+}
+
+.price,
+.stock {
+  margin: 0;
+  font-weight: bold; /* Make text bold for better visibility */
+}
+.beauty-food-toys-more {
+  margin: 20px 0;
+  padding: 0 20px;
+  position: relative;
+  width: calc(100% - 40px);
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f9f9f9;
+}
+
+.beauty-food-toys-more h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.beautyfood-row {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+
+.beautyfood-item {
+  min-width: 200px;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 0 10px;
+  padding: 10px;
+  text-align: center;
+  background: white;
+  box-sizing: border-box;
+}
+
+.beautyfood-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.beautyfood-item p {
+  margin: 5px 0;
+  color: #333;
+}
+
+.beautyfood-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.beautyfood-button.prev {
+  left: 10px;
+}
+
+.beautyfood-button.next {
+  right: 10px;
+}
+
+.beautyfood-container {
+  overflow: hidden;
+  flex: 1;
+  width: 80%;
+  position: relative;
+}
+
+.beautyfood-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.beautyfood-item {
+  position: relative;
+  margin: 0 10px;
+  padding: 10px;
+}
+
+.item-details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.92); /* Transparent black background */
+  color: white;
+  padding: 10px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  filter: brightness(5.5); /* Increase brightness */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Add a subtle text shadow */
+}
+
+.beautyfood-item:hover .item-details {
+  opacity: 1;
+}
+
+.price,
+.stock {
+  margin: 0;
+  font-weight: bold; /* Make text bold for better visibility */
+}
